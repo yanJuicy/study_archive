@@ -2,6 +2,7 @@ package com.in28minutes.mockito.business;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -19,7 +20,8 @@ public class TodoBusinessImplStub {
 		TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoServiceStud);
 		List<String> filteredTodos = todoBusinessImpl.retrieveTodosRelatedToSpring("Dummy");
 		assertEquals(2, filteredTodos);
-		
-		
 	}
+	
+	
+	
 }
