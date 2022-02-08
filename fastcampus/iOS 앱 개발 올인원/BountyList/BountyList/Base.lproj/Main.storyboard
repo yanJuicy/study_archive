@@ -20,13 +20,48 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="627"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cell" id="Cvv-M5-WaG">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="200" id="Cvv-M5-WaG" customClass="ListCell" customModule="BountyList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cvv-M5-WaG" id="OUh-Xm-x56">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="luffy" translatesAutoresizingMaskIntoConstraints="NO" id="Iea-bD-ofa">
+                                                    <rect key="frame" x="16" y="30" width="90" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Iea-bD-ofa" secondAttribute="height" multiplier="7:10" id="SSp-w4-Z00"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luffy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ill-s8-rjG">
+                                                    <rect key="frame" x="120" y="65" width="235" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKG-sr-wkw">
+                                                    <rect key="frame" x="157.5" y="114" width="160" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Iea-bD-ofa" firstAttribute="centerY" secondItem="OUh-Xm-x56" secondAttribute="centerY" constant="-10" id="6JW-0J-LPX"/>
+                                                <constraint firstItem="Iea-bD-ofa" firstAttribute="leading" secondItem="OUh-Xm-x56" secondAttribute="leading" constant="16" id="CLV-pt-h0I"/>
+                                                <constraint firstItem="AKG-sr-wkw" firstAttribute="top" secondItem="Ill-s8-rjG" secondAttribute="bottom" constant="19" id="HIW-PS-bEt"/>
+                                                <constraint firstItem="Iea-bD-ofa" firstAttribute="top" secondItem="OUh-Xm-x56" secondAttribute="top" constant="30" id="Rof-2c-fnR"/>
+                                                <constraint firstItem="Ill-s8-rjG" firstAttribute="centerY" secondItem="OUh-Xm-x56" secondAttribute="centerY" constant="-20" id="WUq-Qt-fPx"/>
+                                                <constraint firstItem="AKG-sr-wkw" firstAttribute="centerX" secondItem="Ill-s8-rjG" secondAttribute="centerX" id="ais-4S-YX2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ill-s8-rjG" secondAttribute="trailing" constant="20" id="csv-bz-lEy"/>
+                                                <constraint firstItem="Ill-s8-rjG" firstAttribute="leading" secondItem="Iea-bD-ofa" secondAttribute="trailing" constant="20" id="hqA-00-KsF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bountyLabel" destination="AKG-sr-wkw" id="P8c-Nc-lDO"/>
+                                            <outlet property="imgView" destination="Iea-bD-ofa" id="21b-Cn-1Zw"/>
+                                            <outlet property="nameLabel" destination="Ill-s8-rjG" id="q10-jn-zee"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -47,10 +82,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="99"/>
+            <point key="canvasLocation" x="741.60000000000002" y="98.50074962518741"/>
         </scene>
     </scenes>
     <resources>
+        <image name="luffy" width="363.5" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
