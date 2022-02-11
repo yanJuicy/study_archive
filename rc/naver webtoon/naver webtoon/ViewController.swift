@@ -8,15 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var myInfo: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        myInfo.layer.borderWidth = 1
-        myInfo.layer.borderColor = UIColor.gray.cgColor
-        
+
     }
 
 
