@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="회원이 요청한 관심상품 객체 생성" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-23T08:33:19" hostname="ihanjuui-MacBook-Pro.local" time="0.021">
-  <properties/>
-  <testcase name="정상 케이스" classname="com.sparta.springcore.model.ProductTest$CreateUserProduct" time="0.021"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
